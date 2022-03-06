@@ -75,14 +75,16 @@
   function select(i) {
     bingo[i].checked = !bingo[i].checked;
 
+    const PLAYGROUND = bingo.slice(0, 25);
+
     const HOR_WIN = [0, 5, 10, 15, 20].some((I) =>
-      bingo.slice(I, I + 5).every((boi) => boi.checked)
+      PLAYGROUND.slice(I, I + 5).every((boi) => boi.checked)
     );
     const VER_WIN = [0, 1, 2, 3, 4].some((I) =>
-      bingo.filter((_, J) => J % 5 === I).every((boi) => boi.checked)
+      PLAYGROUND.filter((_, J) => J % 5 === I).every((boi) => boi.checked)
     );
-    const DIAG_WIN = [0, 6, 12, 18, 24].every((I) => bingo[I].checked);
-    const DIAG_WIN2 = [4, 8, 12, 16, 20].every((I) => bingo[I].checked);
+    const DIAG_WIN = [0, 6, 12, 18, 24].every((I) => PLAYGROUND[I].checked);
+    const DIAG_WIN2 = [4, 8, 12, 16, 20].every((I) => PLAYGROUND[I].checked);
 
     if (HOR_WIN || VER_WIN || DIAG_WIN || DIAG_WIN2) ayyy();
   }

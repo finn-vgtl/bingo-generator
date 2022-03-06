@@ -11,7 +11,7 @@ const config = {
   kit: {
     adapter: adapter(),
     paths: {
-      base: DEV ? "" : "/sveltekit-windi-scaffold",
+      base: DEV ? "" : "/bingo-generator",
     },
   },
 };

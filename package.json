@@ -1,0 +1,29 @@
+{
+  "author": "Finn Voigtländer",
+  "name": "sveltekit-windi-scaffold",
+  "description": "Simple scaffolding for SvelteKit + Windi + GitHub Pages.",
+  "keywords": [
+    "sveltekit",
+    "windi",
+    "template",
+    "scaffold",
+    "gh-pages"
+  ],
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "svelte-kit dev --host",
+    "build": "svelte-kit build",
+    "start": "svelte-kit preview",
+    "deploy": "gh-pages -d build -t true"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "1.0.0-next.28",
+    "@sveltejs/kit": "1.0.0-next.281",
+    "gh-pages": "^3.2.3",
+    "svelte": "^3.46.4",
+    "svelte-windicss-preprocess": "^4.2.6"
+  }
+}
